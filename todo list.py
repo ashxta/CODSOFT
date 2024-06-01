@@ -70,7 +70,7 @@ def add_task():
     # Input for start date
     day_input = int(input("Enter start day (1-31): "))
     month_input = int(input("Enter start month (1-12): "))
-    year_input = int(input("Enter start year (e.g., 2024): "))
+    year_input = int(input("Enter start year : "))
     if not (1 <= day_input <= 31):
         print("Invalid day number.")
         exit()
@@ -85,7 +85,7 @@ def add_task():
     # Input for deadline
     day_input = int(input("Enter deadline day (1-31): "))
     month_input = int(input("Enter deadline month (1-12): "))
-    year_input = int(input("Enter deadline year (e.g., 2024): "))
+    year_input = int(input("Enter deadline year : "))
     if not (1 <= day_input <= 31):
         print("Invalid day number.")
         exit()
@@ -154,7 +154,7 @@ def update_task_start():
     # Input for start date
     day_input = int(input("Enter updated start day (1-31): "))
     month_input = int(input("Enter updated start month (1-12): "))
-    year_input = int(input("Enter updated start year (e.g., 2024): "))
+    year_input = int(input("Enter updated start year : "))
     if not (1 <= day_input <= 31):
         print("Invalid day number.")
         exit()
@@ -187,7 +187,7 @@ def update_task_deadline():
     # Input for deadline
     day_input = int(input("Enter updated deadline day (1-31): "))
     month_input = int(input("Enter updated deadline month (1-12): "))
-    year_input = int(input("Enter updated deadline year (e.g., 2024): "))
+    year_input = int(input("Enter updated deadline year : "))
     if not (1 <= day_input <= 31):
         print("Invalid day number.")
         exit()
