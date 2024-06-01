@@ -98,7 +98,7 @@ def add_task():
     task_deadline = f"{day_input:02}/{month_input:02}/{str(year_input)[-2:]}"
     
     task_progress = input('Enter the progress of the task: ')
-    task_status = input('Enter the status of the task: ')
+    task_status = input('Enter the status of the task [yes/no] : ')
     
     z = "insert into task values(%s, %s, %s, %s, %s, %s)"
     y = (task_id, task_name, task_start, task_deadline, task_progress, task_status)
@@ -259,7 +259,7 @@ def display_task():
         if nd == 1:
             cur.execute("Select * from task")
             records = cur.fetchall()
-            print('|TASK_ID|', '|NAME|', '|START|', '|DEADLINE|', '|PROGRESS|', '|STATUS|')
+            print('|TASK_ID|', '|     NAME   |',  '|   START   |', '|   DEADLINE   |', '|PROGRESS|', '|STATUS|')
             for i in records:
                 print(i[0], '\t', i[1], '\t', i[2], '\t', i[3], '\t', i[4], '\t', i[5])
             print("Task list successfully displayed")
