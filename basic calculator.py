@@ -14,7 +14,7 @@ def basic_calculator():
     addition = num1 + num2
     subtraction = num1 - num2
     multiplication = num1 * num2
-    division = num1 / num2 if num2 != 0 else "Error! Division by zero."
+    division = num1 / num2 if num2!= 0 else "Error! Division by zero."
     
     # Display operation options with a more structured format
     print("\nPlease enter:")
@@ -47,6 +47,16 @@ def basic_calculator():
     else:
         print("Please enter a valid number")
 
-# Call the basic_calculator function
+def main():
+    while True:
+        basic_calculator()
+        response = input("\nDo you want to perform another calculation? (y/n): ").lower()
+        if response in ['n', 'no']:
+            break
+        elif response in ['y', 'yes']:
+            continue
+        else:
+            print("Invalid input. Please enter 'y' or 'n'.")
+
 if __name__ == "__main__":
-    basic_calculator()
+    main()
