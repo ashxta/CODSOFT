@@ -10,10 +10,10 @@ lower="abcdefghijklmnopqrstuvwxyz"
 numbers="1234567890"
 symbols="!@#*(),.\/"
 length=int(input("Enter the Length of the password: "))
-b=int(length/4)
-c=int(length/4)
-d=int(length/4)
-e=length-(b+c+d)
+b = length // 4
+c = length // 4
+d = length // 4
+e = length - (b + c + d)
 part_a=""
 password=""
 for a in range(b):
