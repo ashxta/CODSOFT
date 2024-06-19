@@ -7,7 +7,7 @@ print(y)
 
 import mysql.connector as con
 def is_valid_date(day, month, year):
-    # Check if the day, month, and year form a valid date
+    
     if month in [1, 3, 5, 7, 8, 10, 12]:
         max_day = 31
     elif month in [4, 6, 9, 11]:
@@ -67,7 +67,6 @@ def add_task():
     task_id = int(input('Enter task id: '))
     task_name = input('Enter task name: ')
     
-    # Input for start date
     day_input = int(input("Enter start day (1-31): "))
     month_input = int(input("Enter start month (1-12): "))
     year_input = int(input("Enter start year : "))
@@ -82,7 +81,6 @@ def add_task():
         exit()
     task_start = f"{day_input:02}/{month_input:02}/{str(year_input)[-2:]}"
     
-    # Input for deadline
     day_input = int(input("Enter deadline day (1-31): "))
     month_input = int(input("Enter deadline month (1-12): "))
     year_input = int(input("Enter deadline year : "))
@@ -150,8 +148,6 @@ def update_task_start():
     cur = mydb.cursor()
     
     task_id = int(input("Enter task id for which you want to update start date: "))
-    
-    # Input for start date
     day_input = int(input("Enter updated start day (1-31): "))
     month_input = int(input("Enter updated start month (1-12): "))
     year_input = int(input("Enter updated start year : "))
@@ -183,8 +179,6 @@ def update_task_deadline():
     cur = mydb.cursor()
     
     task_id = int(input("Enter task id for which you want to update deadline: "))
-    
-    # Input for deadline
     day_input = int(input("Enter updated deadline day (1-31): "))
     month_input = int(input("Enter updated deadline month (1-12): "))
     year_input = int(input("Enter updated deadline year : "))
